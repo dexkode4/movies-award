@@ -1,0 +1,37 @@
+.moviecard {
+    cursor: pointer;
+    & > div {
+        border-radius: 5px;
+        height: 400px;
+        left: 50%;
+        position: absolute;
+        width: 300px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .3s ease-in;
+
+    }
+
+    &Image{
+        box-shadow: 0 36px 10px -20px rgba(0,0,0,.2);
+        overflow: hidden;
+        z-index: 1;
+        & img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    &Info{
+        background: #fff;
+    }
+}
+
+.slide {
+    & > *:first-child{
+        transform: translate(-50%, calc(-50% - 40px))
+    }
+    & > *:last-child{
+        transform: translate(-50%, calc(-50% + 40px)) scale(1.1)
+    }
+}

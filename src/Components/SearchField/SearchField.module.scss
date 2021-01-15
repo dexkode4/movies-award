@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+
+.container {
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    border: 1px solid $color-grey-3;
+    background: transparent;
+    padding: .3rem 1.5rem;
+    margin-bottom: 4rem;
+    margin: 0 auto;
+    width: 50%;
+
+    & > svg {
+        color: $color-grey-3;
+        font-size: 1.5rem;
+    }
+
+    
+    & input {
+        border: none;
+        background: transparent;
+        color: $color-white;
+        font-size: 1.3rem;
+        width: 80%;
+        outline-width: 0;
+        padding: 1rem;
+        &::placeholder{
+            color: $color-grey-2;
+            font-size: .9rem;
+        }
+    
+    }   
+}

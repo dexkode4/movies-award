@@ -4,17 +4,18 @@ import styles from './MovieCard.module.scss';
 
 
 interface IImage {
-    imgUrl : string
+    imgUrl: string
 }
 
 
-function MovieCard({imgUrl}:IImage) {
+function MovieCard({ imgUrl }: IImage) {
     const [isSlide, setIsSlide] = useState(false);
     return (
         <div className={cx(styles.moviecard, isSlide && styles.slide)} onClick={() => setIsSlide(!isSlide)}>
-            <div className={styles.moviecardImage}>
-                <img src={imgUrl}/>
-            </div>
+            <div className={styles.moviecardImage} style={{
+                backgroundImage: `url(${imgUrl})`
+            }} />
+
             <div className={styles.moviecardInfo}></div>
         </div>
     )

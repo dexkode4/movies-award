@@ -1,14 +1,12 @@
-// .app{
-//     min-height: 100vh;
-//     &Bg{
-//         background: url("https://i.postimg.cc/NjHjKtG4/US-en-20190128-popsignuptwoweeks-perspective-alpha-website-large.jpg");
-//         background-position: center center;
-//         object-fit: cover;
-//         height: 100%;
-//         position: absolute;
-//         width: 100%;
-//         filter: blur(20px) grayscale(1);
+.app {
+    max-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background:#141414;
+    backdrop-filter: blur(40px);
+    overflow-y: scroll;
+}
 
-//     }
-    
-// }
+

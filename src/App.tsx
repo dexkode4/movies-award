@@ -1,18 +1,22 @@
 import React, { useContext, useEffect } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './pages/home';
 import styles from './app.module.scss';
 import { favContext } from './context/favoriteContext'
+import FavCount from './Components/FavoriteCount';
 
 function App() {
   const state = useContext(favContext)
-  useEffect(() => {
-    console.log('====================================');
-    console.log({ ...state, size: state?.size });
-    console.log('====================================');
-  }, [state?.favorites])
+
   return (
     <div className={styles.app}>
-      <Home />
+      <FavCount />
+      <Router>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+
+      </Router>
     </div>
   );
 }

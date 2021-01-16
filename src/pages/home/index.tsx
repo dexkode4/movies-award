@@ -51,8 +51,6 @@ function Home() {
         <div className={styles.home}>
             <SearchField setQuery={setQuery} />
             {isLoading ? <div className={styles.loader}><HalfCircleSpinner color="red" /> </div> : <MovieList movies={responseData} />}
-                <ToastContainer />
-
         </div>
     )
 }

@@ -1,5 +1,18 @@
 .home {
     padding: 4rem;
-    position: relative;
-    z-index: 10;
+    height: 100vh;
+    z-index: 1000;
+}
+
+
+.loader{
+    height: 100vh;
+    width: 100%;
+
+    & > * {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }

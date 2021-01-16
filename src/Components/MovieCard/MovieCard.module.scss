@@ -1,5 +1,5 @@
+@import '../../styles/generic.scss';
 .moviecard {
-    cursor: pointer;
     height: 400px;
     position: relative;
     margin-bottom: 5rem;
@@ -17,15 +17,26 @@
 
     &Image{
         box-shadow: 0 36px 10px -20px rgba(0,0,0,.2);
-        overflow: hidden;
-        z-index: 1;
 		background-position: center;
         background-size: cover;
         background-color: rgba(0,0,0,.2);
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 1;
     }
 
     &Info{
-        background: #fff;
+        background: $color-white;
+        display: flex;
+        position: relative;
+        padding: 1rem;
+        & .footer{
+            align-self: flex-end;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
     }
 }
 
@@ -36,4 +47,25 @@
     & > *:last-child{
         transform: translate(0, 40px) scale(1.1)
     }
+}
+
+.favBtn{
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    & svg {
+        font-size: 1.5rem;
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover > svg {
+        font-size: 2rem;
+    }
+    
+}
+
+.title {
+    align-self: center;
+    font-weight: 200;
 }

@@ -1,15 +1,25 @@
-@import '../../styles/variables';
+@import '../../styles/generic';
 
 .container {
     display: flex;
     align-items: center;
-    border-radius: 2rem;
+    border-radius: 2.5rem;
     border: 1px solid $color-grey-3;
     background: transparent;
     padding: .3rem 1.5rem;
     margin-bottom: 4rem;
     margin: 0 auto;
     width: 50%;
+
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+
+    &:hover{
+        // box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        box-shadow: 0 0 5px $color-torquoise;
+      }
 
     & > svg {
         color: $color-grey-3;
@@ -28,7 +38,7 @@
         &::placeholder{
             color: $color-grey-2;
             font-size: .9rem;
-        }
+        }   
     
     }   
 }

@@ -4,15 +4,14 @@ import { BsSearch } from 'react-icons/bs';
 import styles from './SearchField.module.scss';
 
 type SearchFieldType = {
-    placeholder: string,
-    handleChange?: any
+    setQuery?: any
 }
 
-function SearchField({ placeholder, handleChange }: SearchFieldType) {
+function SearchField({ setQuery }: SearchFieldType) {
     return (
         <div className={cx(styles.container)}>
             <BsSearch />
-            <input placeholder={placeholder} onChange={handleChange} />
+            <input placeholder='Search a movie' onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)} />
         </div>
     )
 }

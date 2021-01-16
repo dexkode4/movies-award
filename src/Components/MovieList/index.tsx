@@ -1,24 +1,12 @@
 import React from 'react'
 import MovieCard from '../MovieCard';
 import styles from './MovieList.module.scss';
-
-export interface IMovie {
-    Title: string,
-    Year: string,
-    imdbID: string,
-    Type: string,
-    Poster: string
-}
-
-interface IMovies {
-    movies: IMovie[]
-}
-
+import { IMovie, IMovies } from '../../interface';
 function MovieList({ movies }: IMovies) {
     return (
         <div className={styles.movielist}>
-            {movies.map((movie: IMovie) => (
-               <MovieCard imgUrl={movie.Poster}/>
+            {movies?.map((movie: IMovie, index) => (
+                <MovieCard movie={movie} key={index} />
             ))}
         </div>
     )

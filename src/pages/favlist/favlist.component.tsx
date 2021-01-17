@@ -29,7 +29,7 @@ export function MovieSummary({ movie }: { movie: IMovie }) {
             </div>
 
             <div className={styles.dragIcon}>
-                <RiDragMove2Line />
+                {state?.size! > 1 ? <RiDragMove2Line /> : ""}
             </div>
         </div>
     )

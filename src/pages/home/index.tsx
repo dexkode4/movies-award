@@ -17,7 +17,7 @@ function useDebounce(value: string, delay: number) {
                 clearTimeout(handler);
             };
         },
-        [value]
+        [value,delay]
     );
     return debouncedValue;
 }
@@ -31,19 +31,19 @@ function Home() {
 
     useEffect(() => {
 
-        // if (query) {
+        if (debouncedSearchTerm) {
             setIsLoading(true)
             getMovies(query).
                 then(({ Search }) => {
                     setResponseData(Search)
                     setIsLoading(false)
                 })
-        // }
-        // else {
-        //     setResponseData([]);
-        // }
+        }
+        else {
+            setResponseData([]);
+        }
 
-    }, [query])
+    }, [debouncedSearchTerm])
 
     return (
         <div className={styles.home}>

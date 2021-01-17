@@ -7,7 +7,6 @@ import {
     Draggable,
     Droppable,
     DroppableProvided,
-    DraggableLocation,
     DropResult,
     DroppableStateSnapshot, DraggableProvided, DraggableStateSnapshot
 } from 'react-beautiful-dnd';
@@ -30,10 +29,7 @@ function FavList() {
         items.splice(result.destination.index, 0, reorderedItem);
         setFavs(items);
     }
-    const ticketNotVisibleState = {
-        transform: "translateX(-100%)",
-        opacity: 0.1
-    };
+  
 
 
     return (

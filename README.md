@@ -44,3 +44,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/08f1eeca-d4b7-428b-a196-7b2e3b25621e/deploy-status)](https://app.netlify.com/sites/naughty-wing-053cc2/deploys)
+
+
+Live URL: https://naughty-wing-053cc2.netlify.app/

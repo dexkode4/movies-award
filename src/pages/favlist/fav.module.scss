@@ -7,6 +7,10 @@
   padding: 4rem;
   height: 100vh;
   width: 100%;
+
+  @media (max-width:400px) {
+    padding: 2rem;
+  }
 }
 .movieSummary{
   border: 1px solid $color-grey-3;
@@ -17,11 +21,13 @@
   margin-bottom: 2rem;
   padding: 1rem;
   position: relative;
-  width: 50%;
+  width: 100%;
   transition: all .2s ease-in-out;
 
   &:hover{
-    color: $color-white;
+    & > *:not(:last-child){
+      color: $color-white;
+    }
   }
 
   & .image {
@@ -40,9 +46,18 @@
   right: 1rem;
   top: 1rem;
   width: fit-content;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: tomat;
+  }
 
   & svg {
     font-size: 2rem;
+
+    @media (max-width:400px) {
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -52,14 +67,11 @@
   & > *:not(:last-child){
     margin-bottom: .5rem;
   }
-}
 
-
-.removeBtn{
-  transition: all .2s ease-in-out;
-
-  &:hover {
-    color: red;
+  @media (max-width:400px) {
+    width: 70%;
+    font-size: .5rem;
+    margin-right: 2rem;
   }
 }
 
@@ -67,4 +79,30 @@
   color: $color-torquoise-1;
   margin-bottom: 2rem;
   text-transform: capitalize;
+}
+
+.movieSummaryContainer{
+  width: 50%;
+
+  @media (max-width:400px) {
+    width: 100%;
+  }
+}
+
+.dragIcon{
+  font-size: 1.5rem;
+  color: $color-grey-3;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  @media (max-width:400px) {
+    font-size: 1rem;
+  }
+  & svg{
+    transform: rotate(90deg);
+   & path{
+    stroke: $color-grey-2;
+
+   }
+  }
 }

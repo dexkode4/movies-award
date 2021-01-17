@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import styles from './fav.module.scss';
 import { IMovie } from '../../interface';
 import { FiTrash2 } from 'react-icons/fi';
+import { GrDrag } from 'react-icons/gr';
+import { RiDragMove2Line } from 'react-icons/ri';
 import { favContext } from '../../context/favoriteContext';
 
 export function MovieSummary({ movie }: { movie: IMovie }) {
@@ -24,6 +26,10 @@ export function MovieSummary({ movie }: { movie: IMovie }) {
             </div>
             <div className={styles.removeBtn} onClick={() => state?.removeMovie(movie)}>
                 <FiTrash2 />
+            </div>
+
+            <div className={styles.dragIcon}>
+                <RiDragMove2Line />
             </div>
         </div>
     )

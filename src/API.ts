@@ -6,7 +6,7 @@ export const getMovies = async (query: string) => {
         , {
             params: {
                 s: query,
-                apikey: process.env.REACT_APP_API_KEY
+                apikey: "ff581cf0"
             },
         }
     )

@@ -44,6 +44,8 @@ const FavContextProvider = ({ children }: Propstype) => {
     const removeMovie = (payload: IMovie) => {
         setFavorites((prevState) => prevState.filter((movie) => movie.imdbID !== payload.imdbID))
         setSize((prev) => prev - 1)
+
+        return toast.error("Movie removed");
     };
 
 

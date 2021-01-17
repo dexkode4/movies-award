@@ -1,8 +1,32 @@
 .counter{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 5rem;
-    width: 10rem;
-    border: 1px solid red;
+    color: #fff;
+    cursor: pointer;
+    position: sticky;
+    right: 5%;
+    top: 5%;
+    transform: translateX(4rem);
+    width: fit-content;
+    z-index: 1000;
+    & svg {
+        font-size: 3.5rem;
+        animation: heartbeat 1s infinite; 
+    }
 }
+
+
+
+@keyframes heartbeat {
+    0% {
+      transform: scale( 1 );    
+    }
+    20% {
+      transform: scale( 1.25 ) 
+        translateX(5%) 
+        translateY(5%);
+    } 
+    40% {
+      transform: scale( 1.5 ) 
+        translateX(9%) 
+        translateY(10%);
+    }
+  }

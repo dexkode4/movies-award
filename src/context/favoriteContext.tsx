@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useEffect, useMemo, useState } from "react";
+import React, { createContext, useEffect, useMemo, useState } from "react";
 import { toast } from "react-toastify";
 import { IMovie, IContextValues } from '../interface';
 
@@ -26,7 +26,7 @@ const FavContextProvider = ({ children }: Propstype) => {
     const addMovie = (payload: IMovie) => {
 
         if (favorites.length >= 5) {
-            return toast.info("You can't vote more than 5 movies");
+            return toast.info("You can't nominate more than 5 movies");
         }
         else {
 
@@ -35,7 +35,7 @@ const FavContextProvider = ({ children }: Propstype) => {
                 setSize((prev) => prev + 1)
             }
             else {
-                return toast.error("Movie already voted");
+                return toast.error("Movie already nominated");
             }
         }
 

@@ -11,8 +11,6 @@ import {
     DropResult,
     DroppableStateSnapshot, DraggableProvided, DraggableStateSnapshot
 } from 'react-beautiful-dnd';
-import { IMovie } from '../../interface';
-
 
 
 
@@ -32,6 +30,10 @@ function FavList() {
         items.splice(result.destination.index, 0, reorderedItem);
         setFavs(items);
     }
+    const ticketNotVisibleState = {
+        transform: "translateX(-100%)",
+        opacity: 0.1
+    };
 
 
     return (
@@ -46,7 +48,7 @@ function FavList() {
                     {
                         (provided: DroppableProvided, snapshot: DroppableStateSnapshot) => (
 
-                            <div {...provided.droppableProps} ref={provided.innerRef}  className={styles.movieSummaryContainer}>
+                            <div {...provided.droppableProps} ref={provided.innerRef} className={styles.movieSummaryContainer}>
 
                                 {
                                     favs?.map((movie, index) => (
@@ -55,11 +57,9 @@ function FavList() {
                                                 <div
                                                     ref={providedDraggable.innerRef}
                                                     {...providedDraggable.draggableProps}
-                                                    {...providedDraggable.dragHandleProps}
-                                            
-
-                                                >
-                                                    <MovieSummary movie={movie} />
+                                                    {...providedDraggable.dragHandleProps}         >
+                                                        <MovieSummary movie={movie} />
+                                                   
                                                 </div>
                                             )}
                                         </Draggable>
@@ -70,10 +70,6 @@ function FavList() {
 
                         )
                     }
-
-                    {/* {favs?.map((movie) => (
-                        <MovieSummary movie={movie} />
-                    ))} */}
                 </Droppable>
             </DragDropContext>
         </div>

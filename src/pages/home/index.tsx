@@ -17,7 +17,7 @@ function useDebounce(value: string, delay: number) {
                 clearTimeout(handler);
             };
         },
-        [value,delay]
+        [value, delay]
     );
     return debouncedValue;
 }
@@ -43,7 +43,7 @@ function Home() {
             setResponseData([]);
         }
 
-    }, [debouncedSearchTerm])
+    }, [debouncedSearchTerm, query])
 
     return (
         <div className={styles.home}>

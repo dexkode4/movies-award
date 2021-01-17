@@ -4,8 +4,6 @@ import styles from './home.module.scss';
 import SearchField from '../../Components/SearchField';
 import MovieList from '../../Components/MovieList';
 import { getMovies } from '../../API';
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 
 function useDebounce(value: string, delay: number) {
@@ -33,19 +31,19 @@ function Home() {
 
     useEffect(() => {
 
-        if (debouncedSearchTerm) {
+        // if (query) {
             setIsLoading(true)
             getMovies(query).
                 then(({ Search }) => {
                     setResponseData(Search)
                     setIsLoading(false)
                 })
-        }
-        else {
-            setResponseData([]);
-        }
+        // }
+        // else {
+        //     setResponseData([]);
+        // }
 
-    }, [debouncedSearchTerm])
+    }, [query])
 
     return (
         <div className={styles.home}>

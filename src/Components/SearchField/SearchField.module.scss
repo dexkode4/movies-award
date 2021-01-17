@@ -10,6 +10,10 @@
     margin-bottom: 4rem;
     margin: 0 auto;
     width: 50%;
+    @media (max-width:500px) {
+        width: 100%;
+      }
+    
 
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
